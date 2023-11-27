@@ -110,8 +110,8 @@ export const Home: React.FC = () => {
         getJobs();
 
         const handleScroll = () => {
-            const scrollTop = window.pageYOffset;
-            scrollTop > 300 ? setIsActive(true) : setIsActive(false);
+            const {scrollY} = window;
+            scrollY > 300 ? setIsActive(true) : setIsActive(false);
         };
 
         window.addEventListener('scroll', handleScroll);
